@@ -97,8 +97,8 @@ root = Tk() # hoofdvenster
 root.title("IR evaluator") # titelbalk
     
 # bovenkant
-label1 = Label(root, text="Search results 1:")
-label2 = Label(root, text="Search results 2:")
+label1 = Label(root, text="Search results system 1:")
+label2 = Label(root, text="Search results system 2:")
 label1.grid(row = 0, column = 0)
 label2.grid(row = 0, column=1)
 
