@@ -55,13 +55,13 @@ def calculate_metrics():
         return (2 * prec * rec) / (prec + rec)
    
    total_precision1 = len(precision1) / 10
-   total_recall1 = sum(recall1) / len(recall1)
+   total_recall1 = len(recall1) / relevant_docs
    f1_measure1 = f1(total_precision1, total_recall1)
    avg_precision1 = sum(precision1) / len(precision1)
    precision_at_1_1 = precision1[0]
    
    total_precision2 = len(precision2) / 10
-   total_recall2 = sum(recall2) / len(recall2)
+   total_recall2 = len(recall2) / relevant_docs
    f1_measure2 = f1(total_precision2, total_recall2)
    avg_precision2 = sum(precision2) / len(precision2)
    precision_at_1_2 = precision2[0]
