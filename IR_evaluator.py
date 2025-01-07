@@ -118,7 +118,7 @@ relevant_input = Entry(root)
 relevant_input.grid(row = 2, column =1, sticky = "W")
 relevant_input.insert(0, "15") #Voorbeeld
 
-runQuery = Button(root, text="Run Query", command = calculate_metrics)
+runQuery = Button(root, text="Generate metrics", command = calculate_metrics)
 runQuery.grid(row = 3, column = 0, sticky = "E")
 
 # Metrics display
