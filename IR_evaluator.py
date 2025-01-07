@@ -52,22 +52,22 @@ def calculate_metrics():
    
     #Formules voor het berekenen
    def f1(prec, rec):
-        return (2 * prec * rec) / (prec + rec) if prec + rec > 0 else 0
+        return (2 * prec * rec) / (prec + rec)
    
-   total_precision1 = sum(precision1) / len(precision1)
+   total_precision1 = len(precision1) / 10
    total_recall1 = sum(recall1) / len(recall1)
    f1_measure1 = f1(total_precision1, total_recall1)
    avg_precision1 = sum(precision1) / len(precision1)
    precision_at_1_1 = precision1[0]
    
-   total_precision2 = sum(precision2) / len(precision2)
+   total_precision2 = len(precision2) / 10
    total_recall2 = sum(recall2) / len(recall2)
    f1_measure2 = f1(total_precision2, total_recall2)
    avg_precision2 = sum(precision2) / len(precision2)
    precision_at_1_2 = precision2[0]
    
 
-    # Calculate overlap
+    # Overlap berekenen
    overlap = len(set([x[1] for x in list1]) & set([x[1] for x in list2]))
 
 
