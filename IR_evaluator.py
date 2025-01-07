@@ -73,21 +73,21 @@ def calculate_metrics():
 
     # Display metrics
    metrics1_label.config(
-        text=f"List 1 - Precision: {total_precision1:.2f}, Recall: {total_recall1:.2f}, F1: {f1_measure1:.2f}, "
+        text=f"System 1 - Precision: {total_precision1:.2f}, Recall: {total_recall1:.2f}, F1: {f1_measure1:.2f}, "
              f"Precision@1: {precision_at_1_1:.2f}, Avg Precision: {avg_precision1:.2f}"
     )
    metrics2_label.config(
-        text=f"List 2 - Precision: {total_precision2:.2f}, Recall: {total_recall2:.2f}, F1: {f1_measure2:.2f}, "
+        text=f"System 2 - Precision: {total_precision2:.2f}, Recall: {total_recall2:.2f}, F1: {f1_measure2:.2f}, "
              f"Precision@1: {precision_at_1_2:.2f}, Avg Precision: {avg_precision2:.2f}"
     )
    overlap_label.config(text=f"Result Overlap: {overlap}")
 
  # Print ranked table
-   print("\nRanked Table for List 1:")
+   print("\nRanked Table for System 1:")
    for i, (prec, rec) in enumerate(zip(precision1, recall1)):
         print(f"Rank {i + 1}: Precision = {prec:.2f}, Recall = {rec:.2f}")
 
-   print("\nRanked Table for List 2:")
+   print("\nRanked Table for System 2:")
    for i, (prec, rec) in enumerate(zip(precision2, recall2)):
         print(f"Rank {i + 1}: Precision = {prec:.2f}, Recall = {rec:.2f}")
     
